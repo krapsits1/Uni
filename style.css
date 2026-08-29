@@ -376,8 +376,17 @@ table.req tr:last-child td {
     padding: 16px 18px;
     color: var(--fg);
     font-size: 13px;
+    line-height: 1.6;
     background: var(--panel);
-    white-space: pre-wrap;
+    white-space: pre-line;
+    text-align: left;
+    word-break: break-word;
+}
+
+.notes strong {
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: .02em;
 }
 
 .notes.warn {
