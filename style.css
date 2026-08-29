@@ -131,6 +131,7 @@ a:hover {
     min-height: 320px;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .day header {
@@ -187,9 +188,14 @@ a:hover {
     letter-spacing: .08em;
     color: var(--muted);
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 6px 10px;
     align-items: center;
     margin-bottom: 6px;
+}
+
+.cls .time>span {
+    white-space: nowrap;
 }
 
 .cls .time .type {
@@ -200,6 +206,7 @@ a:hover {
     border: 1px solid var(--dim);
     padding: 1px 6px;
     border-radius: 2px;
+    white-space: nowrap;
 }
 
 .cls .name {
@@ -421,6 +428,25 @@ table.req tr:last-child td {
 }
 
 /* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1200px) {
+    .day {
+        padding: 14px 12px 18px;
+    }
+
+    .cls {
+        padding: 6px 0 12px 10px;
+    }
+
+    .cls .name {
+        font-size: 12px;
+    }
+
+    .cls .time .type {
+        font-size: 9px;
+        padding: 1px 4px;
+    }
+}
 
 @media (max-width: 900px) {
     .wrap {
