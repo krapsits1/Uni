@@ -183,6 +183,11 @@ a:hover {
     border-left-color: var(--accent);
 }
 
+.cls.required {
+    outline: 1px solid #ff4444;
+    outline-offset: -1px;
+}
+
 .cls .time {
     font-size: 11px;
     letter-spacing: .08em;
