@@ -115,6 +115,117 @@ a:hover {
     padding: 0 6px;
 }
 
+.nav-links {
+    margin: -20px 0 32px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    border: 1px solid var(--line);
+    padding: 7px 14px;
+    border-radius: 2px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 11px;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ---------- FLOOR PLANS ---------- */
+
+.floors {
+    margin-bottom: 40px;
+}
+
+.floors h2 {
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    margin: 0 0 16px;
+}
+
+.floor-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.floor-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.floor-nav label {
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    padding: 6px 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    user-select: none;
+    transition: color .12s, border-color .12s, background .12s;
+}
+
+.floor-nav label:hover {
+    color: var(--fg);
+    border-color: var(--dim);
+}
+
+.floor-plan {
+    display: none;
+    margin: 0;
+}
+
+.floor-plan img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border: 1px solid var(--line);
+    background: var(--bg);
+}
+
+.floor-plan figcaption {
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--warn);
+    margin-bottom: 10px;
+}
+
+#floor-0:checked~.floor-nav label[for="floor-0"],
+#floor-1:checked~.floor-nav label[for="floor-1"],
+#floor-2:checked~.floor-nav label[for="floor-2"],
+#floor-3:checked~.floor-nav label[for="floor-3"] {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(200, 255, 90, .08);
+}
+
+.floor-input:focus-visible~.floor-nav label {
+    outline: 1px solid var(--dim);
+    outline-offset: 2px;
+}
+
+#floor-0:checked~.floor-view .f0,
+#floor-1:checked~.floor-view .f1,
+#floor-2:checked~.floor-view .f2,
+#floor-3:checked~.floor-view .f3 {
+    display: block;
+}
+
 /* ---------- SCHEDULE GRID ---------- */
 
 .days {
@@ -484,5 +595,16 @@ table.req tr:last-child td {
 
     .info dt {
         border-top: 1px solid var(--line);
+    }
+
+    .floor-nav {
+        gap: 6px;
+    }
+
+    .floor-nav label {
+        flex: 1 1 calc(50% - 3px);
+        text-align: center;
+        padding: 8px 6px;
+        font-size: 10px;
     }
 }
