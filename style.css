@@ -299,6 +299,15 @@ a:hover {
     outline-offset: -1px;
 }
 
+.cls.red {
+    border-left-color: #ff4444;
+    background: rgba(255, 68, 68, .06);
+}
+
+.cls.red .name .code {
+    color: #ff4444;
+}
+
 .cls .time {
     font-size: 11px;
     letter-spacing: .08em;
